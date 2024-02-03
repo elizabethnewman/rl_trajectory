@@ -1,5 +1,5 @@
 import logging
-# Directly modified from the OT-flow Github Depository
+import os
 
 
 def get_logger(logpath, filepath, package_files=[], displaying=True, saving=True, debug=False):
@@ -27,3 +27,13 @@ def get_logger(logpath, filepath, package_files=[], displaying=True, saving=True
             logger.info(package_f.read())
 
     return logger
+
+def makedirs(dirname):
+    """
+    make the directory folder structure
+    :param dirname: string path
+    :return: void
+    """
+    if not os.path.exists(dirname):
+        os.makedirs(dirname)
+

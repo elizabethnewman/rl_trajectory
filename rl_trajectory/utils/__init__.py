@@ -1,5 +1,5 @@
-
+from rl_trajectory.utils.argument_parser import get_argument_parser
 from rl_trajectory.utils.set_seed import seed_everything
 from rl_trajectory.utils.exploration_parameters import choose_exploration_parameters
-from rl_trajectory.utils.logger import get_logger
+from rl_trajectory.utils.logger import get_logger, makedirs
 from rl_trajectory.utils.discretize_box_state import discretize_box_state

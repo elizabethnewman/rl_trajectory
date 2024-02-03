@@ -9,6 +9,6 @@ setup(
     author='Elizabeth Newman',
     author_email='elizabeth.newman@emory.edu',
     description='',
-    install_requires=['gym==0.26.2', 'numpy==1.24.3', 'torch==2.0.1', 'matplotlib'],
+    install_requires=['gym==0.26.2', 'numpy==1.24.3', 'torch==2.0.1', 'matplotlib', 'pandas'],
     python_requires='>=3.6'
 )
