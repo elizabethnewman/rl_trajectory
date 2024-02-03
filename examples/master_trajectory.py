@@ -54,6 +54,19 @@ torch.save(results, os.path.join(savedir_name, 'results.pth'))
 
 #%%
 import matplotlib.pyplot as plt
+
+info = results['history']
+info['value'] = np.array(info['value'])
+idx1 = info['header'].index('episode')
+idx2 = info['header'].index('total_reward')
+
+plt.figure()
+plt.plot(info['value'][:, idx1], info['value'][:, idx2], linewidth=2)
+plt.xlabel('episode')
+plt.ylabel('return')
+plt.title('total reward')
+plt.savefig(os.path.join(savedir_name, 'total_reward.png'),  bbox_inches='tight')
+
 # reset to usual starting plot
 s0 = [-1 + traj.h[0], -1 + traj.h[1]]
 traj.x0 = gym.spaces.Box(np.array(s0, dtype=np.float32), np.array(s0, dtype=np.float32), dtype=np.float32)

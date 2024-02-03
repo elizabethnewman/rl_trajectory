@@ -4,6 +4,7 @@ import numpy as np
 import gym
 from rl_trajectory.utils import seed_everything
 
+max_steps = 1000
 traj = env.TrajectoryEnv(grid_size=np.array((16, 16)), max_step_count=max_steps)
 traj.x0 = gym.spaces.Box(low=np.array([-1, -1], dtype=np.float32),
                          high=np.array([1, 1], dtype=np.float32),
@@ -11,7 +12,7 @@ traj.x0 = gym.spaces.Box(low=np.array([-1, -1], dtype=np.float32),
 
 seed_everything(42, traj)
 
-opt = alg.TabularSARSA(max_steps=1000, num_episodes=3000, penalty=0, max_eps=1e0, min_eps=1e-5, alpha=0.5)
+opt = alg.TabularSARSA(max_steps=max_steps, num_episodes=3000, penalty=0, max_eps=1e0, min_eps=1e-5, alpha=0.5)
 
 Q = np.zeros(tuple(traj.grid_size) + (traj.action_space.n, ), dtype=np.float32)
 results = opt.train(traj, Q, verbose=True, log_interval=10)
