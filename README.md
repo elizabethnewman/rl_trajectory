@@ -5,11 +5,11 @@ Play with trajectory environment
 ## Installation
 
 ```console
-python -m pip install git+https://$personal_access_token@github.com/elizabethnewman/rl_trajectory.git
+python -m pip install git+https://github.com/elizabethnewman/rl_trajectory.git
 ```
 
 ```console
-git clone https://$personal_access_token@github.com/elizabethnewman/rl_trajectory.git
+git clone https://github.com/elizabethnewman/rl_trajectory.git
 ```
 
 ## Colab Notebook
