@@ -3,3 +3,4 @@ from rl_trajectory.utils.set_seed import seed_everything
 from rl_trajectory.utils.exploration_parameters import choose_exploration_parameters
 from rl_trajectory.utils.logger import get_logger, makedirs
 from rl_trajectory.utils.discretize_box_state import discretize_box_state
+from rl_trajectory.utils.extract_insert_data import extract_data, insert_data

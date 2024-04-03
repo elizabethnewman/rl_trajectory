@@ -1,1 +1,3 @@
-from rl_trajectory.policies.tabular_policies import TabularPolicy, TabularEpsilonGreedy, TabularGreedy
+from rl_trajectory.policies.function_approximation_policy import FunctionApproximationPolicy, FunctionApproximationGreedy, FunctionApproximationEpsilonGreedy
+from rl_trajectory.policies.tabular_policy import TabularPolicy, TabularGreedy, TabularEpsilonGreedy
+

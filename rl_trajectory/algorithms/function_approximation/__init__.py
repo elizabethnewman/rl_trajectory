@@ -1,0 +1,3 @@
+from rl_trajectory.algorithms.function_approximation.function_approximation_algorithm import LinearFunctionApproximationAlgorithm
+from rl_trajectory.algorithms.function_approximation.semigradient_sarsa import LinearSemiGradientSARSA
+

@@ -1,0 +1,3 @@
+from rl_trajectory.featurizers.featurizer import Featurizer, ConcatenatedFeaturizer
+from rl_trajectory.featurizers.polynomial_featurizer import PolynomialFeaturizer
+from rl_trajectory.featurizers.coarse_coding import TilingFeaturizer
